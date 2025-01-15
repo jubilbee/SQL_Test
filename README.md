@@ -2,6 +2,9 @@
 
 Based on feedback from employers, we have created a comprehensive SQL test document designed to prepare you for common SQL interview questions. This test covers all the essential SQL functions that are frequently tested in interviews, helping you build a strong foundation.
 
+### To run this
+run the db_builder.py file and then you can work in the final.ipynb 
+
 ### What You'll Learn
 
 **Basic SQL Functions:** We will start with basic operations like SELECT, JOIN, WHERE, GROUP BY, and ORDER BY.
