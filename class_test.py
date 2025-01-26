@@ -129,7 +129,10 @@ class QueryTest:
             print("INNER JOIN query was not successful")
     
     def insert_test(self, query):
+        conn.execute(query)
+        conn.commit()
         student_31_check = sql("SELECT * FROM students WHERE student_id = 31")
+        
 
         if student_31_check is not None and not student_31_check.empty:
             student_row = student_31_check.iloc[0]
@@ -147,6 +150,8 @@ class QueryTest:
             print("INSERT query was not successful")
 
     def delete_test(self, query):
+        conn.execute(query)
+        conn.commit()
         student_31_check = sql("SELECT * FROM students WHERE student_id = 31")
 
         if student_31_check is None or student_31_check.empty:
@@ -156,7 +161,10 @@ class QueryTest:
             print("Student still exists:", student_31_check)
 
     def update_query_test(self, query):
+        conn.execute(query)
+        conn.commit()
         student_31_check = sql("SELECT * FROM students WHERE student_id = 31")
+
         if student_31_check is not None and not student_31_check.empty:
             student_row = student_31_check.iloc[0]
 
